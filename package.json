@@ -1,0 +1,20 @@
+{
+  "name": "mobilenycv1",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "solid-js": "^1.8.15"
+  },
+  "devDependencies": {
+    "@types/google.maps": "^3.55.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-solid": "^2.10.2"
+  }
+}
