@@ -8,7 +8,6 @@ type LocID = `#p${number}`;
 function App() {
   gsap.registerPlugin(ScrollTrigger);
 
-  // console.log(LocationData);
   // const markerURL = 'https://i.imgur.com/cGQh8J8.png';
   // const markerImgEle = document.createElement('img')
   // markerImgEle.src = markerURL;
@@ -337,8 +336,6 @@ function App() {
       console.log(panelCont);
       function scrolling(e: WheelEvent) {
         const delta = e.deltaY;
-        // console.log(e);
-        // console.log(delta);
         if (panelCont) {
           panelCont.scrollBy(0, delta);
         }
@@ -363,27 +360,6 @@ function App() {
       // });
     }
 
-    // const testLoc = new google.maps.LatLng(40.74736, -73.85179);
-
-    // setTimeout(() => {
-    //   console.log('Panning to test location...');
-    //   map.panTo(testLoc);
-    // }, 3000);
-
-    // for (const id in LocationData) {
-    //   const loc: LocID = LocationData[id];
-    //   console.log(loc);
-    //   // addMarker(map, loc.coo);
-    // }
-
-    // const tops = sections.map((section) =>
-    //   ScrollTrigger.create({
-    //     trigger: section,
-    //     start: 'top top',
-    //     scroller: '#panelcont',
-    //     markers: true,
-    //   })
-    // );
 
     const calcpn = (c: number): { p?: LocID; c: LocID; n?: LocID } => {
       if (c === 0 || c === 1) {
@@ -483,17 +459,6 @@ function App() {
       });
     });
 
-    // ScrollTrigger.create({
-    //   scroller: '#panelcont',
-    //   markers: true,
-    //   snap: {
-    //     snapTo: (progress, self) => {
-    //       const panelStarts = tops.map((st) => st.start);
-    //       const snapScroll = gsap.utils.snap(panelStarts, self!.scroll());
-    //       return gsap.utils.normalize(0, ScrollTrigger.maxScroll(window), snapScroll);
-    //     },
-    //   },
-    // });
   });
 
   return (
@@ -623,94 +588,6 @@ function App() {
                   <h3>Forest Hills Stadium</h3>
                 </article>
               </div>
-              {/* <div id="p1" class="panel">
-                <article class="pico-background-zinc-900">
-
-                  <small>
-                    Bunch of info Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                  </small>
-                  <footer>Details</footer>
-                </article>
-              </div>
-              */}
-              {/* <div id="p2" class="panel">
-                <article class="pico-background-zinc-900">
-
-                  <small>
-                    Bunch of info Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                  </small>
-                  <footer>Details</footer>
-                </article>
-              </div> */}
-              {/* <div id="p3" class="panel">
-                <article class="pico-background-zinc-900">
-
-                  <small>
-                    Bunch of info Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
-                  </small>
-                  <footer>Details</footer>
-                </article>
-              </div> */}
-              {/* <div id="p4" class="panel">
-              4
-              <div class="panelcontent">
-                <h2>Some Location</h2>
-                <p>Some information. </p>
-              </div>
-            </div>
-            <div id="p5" class="panel">
-              5
-              <div class="panelcontent">
-                <h2>Some Location</h2>
-                <p>Some information. </p>
-              </div>
-              </div>
-            <div id="p6" class="panel">
-            6
-              <div class="panelcontent">
-              <h2>Some Location</h2>
-                <p>Some information. </p>
-              </div>
-              </div>
-            <div id="p7" class="panel">
-              7
-              <div class="panelcontent">
-                <h2>Some Location</h2>
-                <p>Some information. </p>
-              </div>
-            </div>
-            <div id="p8" class="panel">
-              8
-              <div class="panelcontent">
-              <h2>Some Location</h2>
-              <p>Some information. </p>
-              </div>
-              </div>
-              <div id="p9" class="panel">
-              9
-              <div class="panelcontent">
-              <h2>Some Location</h2>
-                <p>Some information. </p>
-              </div>
-            </div>
-            <div id="p10" class="panel">
-            10
-            <div class="panelcontent">
-            <h2>Some Location</h2>
-            <p>Some information. </p>
-            </div>
-          </div> */}
-              {/* <div id="bottompanelspacer"></div> */}
-              {/* {progress} */}
             </div>
           </div>
         </section>
@@ -721,38 +598,3 @@ function App() {
 }
 
 export default App;
-// import { createSignal } from \'solid-js'
-// import solidLogo from './assets/solid.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-
-// function App() {
-//   const [count, setCount] = createSignal(0)
-
-//   return (
-//     <>
-//       <div>
-//         <a href="https://vitejs.dev" target="_blank">
-//           <img src={viteLogo} class="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://solidjs.com" target="_blank">
-//           <img src={solidLogo} class="logo solid" alt="Solid logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + Solid</h1>
-//       <div class="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count()}
-//         </button>
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p class="read-the-docs">
-//         Click on the Vite and Solid logos to learn more
-//       </p>
-//     </>
-//   )
-// }
-
-// export default App
