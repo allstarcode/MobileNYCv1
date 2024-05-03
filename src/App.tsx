@@ -1,7 +1,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { createEffect } from 'solid-js';
-import './App.css';
+import './App.sass';
 
 type LocID = `#p${number}`;
 
@@ -11,6 +11,62 @@ function App() {
   // const markerURL = 'https://i.imgur.com/cGQh8J8.png';
   // const markerImgEle = document.createElement('img')
   // markerImgEle.src = markerURL;
+
+  // const arrowSize = 64;
+
+  const popupBtn = (
+    <button class="coolbtn b-font" autofocus>
+      <span>Got it!</span>
+    </button>
+  ) as unknown as HTMLButtonElement;
+  const popupChk = (<input type="checkbox" id="dontshow" />) as unknown as HTMLInputElement;
+
+  const popup = (
+    <dialog>
+      <div>
+        <h2 class="st-font">How to use this site: </h2>
+        <ul class="b-font">
+          <li>Click on the arrows to step through ASC events</li>
+          <li>Click on any marker to view that event's details</li>
+          <li>Press the arrow keys on your keyboard to step through ASC events</li>
+          <li>Click the blue "i" icon on the bottom right to view this popup again at any time</li>
+        </ul>
+      </div>
+      <footer class="popupfoot">
+        {popupBtn}
+        <div>
+          <label for="dontshow" class="b-font">
+            Don't show this again
+          </label>
+          {popupChk}
+        </div>
+      </footer>
+    </dialog>
+  ) as unknown as HTMLDialogElement;
+
+  const popupTrigger = (
+    <div id="popuptrigger">
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+        <path d="M440-280h80v-240h-80v240Zm40-320q17 0 28.5-11.5T520-640q0-17-11.5-28.5T480-680q-17 0-28.5 11.5T440-640q0 17 11.5 28.5T480-600Zm0 520q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
+      </svg>
+    </div>
+  ) as unknown as HTMLDivElement;
+
+  const arrowRight = (
+    <div id="arrowright" class="arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+        <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+      </svg>
+    </div>
+  ) as unknown as HTMLDivElement;
+  const arrowLeft = (
+    <div id="arrowleft" class="arrow">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+        <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+      </svg>
+    </div>
+  ) as unknown as HTMLDivElement;
+
   const parser = new DOMParser();
   const pinSVGStr =
     '<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg width="96" height="96" viewBox="0 0 63 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"><g><path d="M31.25,59.017c0,0 -2.164,-10.326 -6.307,-21.261c-2.776,-7.325 -8.093,-14.923 -8.093,-19.873c0,-7.948 6.453,-14.4 14.4,-14.4c7.947,-0 14.4,6.452 14.4,14.4c-0,4.957 -5.324,12.571 -8.105,19.906c-4.141,10.923 -6.295,21.228 -6.295,21.228Z" style="fill:#ff4539;"/><path d="M33.534,19.17l0.067,-0.201l5.487,-0.623l3.848,-1.252l-1.513,-4.668l-3.848,1.252l-4.808,2.726l-0.17,-0.124l1.104,-5.42l-0,-4.052l-4.902,0l0,4.052l1.104,5.42l-0.169,0.124l-4.808,-2.726l-3.847,-1.252l-1.515,4.668l3.849,1.252l5.486,0.623l0.067,0.201l-4.076,3.735l-2.376,3.277l3.965,2.885l2.379,-3.277l2.287,-5.036l0.211,0l2.286,5.036l2.38,3.277l3.964,-2.885l-2.376,-3.277l-4.076,-3.735Z" style="fill:#101820;fill-rule:nonzero;"/></g></svg>';
@@ -27,22 +83,31 @@ function App() {
   const panToLoc = (m: google.maps.Map, l: google.maps.LatLng) => {
     m.panTo(l);
   };
-  // const onScroller = (e: Event) => {
-  //   if (!e.target) return;
-  //   const target = e.target as unknown as HTMLElement;
-  //   const st = target.scrollTop;
-  //   const sh = target.scrollHeight;
-  //   const percent = (st / (sh - target.clientHeight)) * 100;
-  //   progress.value = percent;
-  // };
-
-  // const addMarker = (m: google.maps.Map, lat: number, lng: number, title?: string) => {};
 
   createEffect(async () => {
-    //? Map stuffs
+    //? Global / setup stuffs
     let map: google.maps.Map;
-    const sections: HTMLElement[] = gsap.utils.toArray('.panel');
-    console.log(sections);
+    let tracker = 0;
+
+    const savedShow = window.localStorage.getItem('showpopup');
+    let showPopup = savedShow && savedShow === 'no';
+    // console.log(savedShow, showPopup);
+    showPopup ||= false;
+
+    // console.log('Show popup?', showPopup);
+
+    if (showPopup) {
+      popup.showModal();
+    }
+    popupBtn.onclick = () => {
+      // console.log("Don't show again?", popupChk.checked);
+      popup.close();
+      if (popupChk.checked) {
+        window.localStorage.setItem('showpopup', 'no');
+      } else {
+        window.localStorage.setItem('showpopup', 'yes');
+      }
+    };
 
     const { LatLng } = (await google.maps.importLibrary('core')) as google.maps.CoreLibrary;
     const { InfoWindow } = (await google.maps.importLibrary(
@@ -282,7 +347,28 @@ function App() {
       },
     };
 
+    const tl = gsap.timeline();
+    const randCoords = (): { x?: number; y?: number } => {
+      const coords: { x?: number; y?: number } = {};
+      const range = 200;
+      coords.x = gsap.utils.random(-range, range);
+      coords.y = gsap.utils.random(-range, range);
+      return coords;
+    };
     const numPanels = Object.values(LocationData).length;
+
+    // console.log('Tracker start: ', tracker);
+
+    const allOpacity0 = (exclude: LocID) => {
+      Object.keys(LocationData).forEach((k) => {
+        if (k === exclude) return;
+        const key = k as unknown as LocID;
+        const e = document.querySelector(key) as unknown as HTMLElement | null;
+        if (e) {
+          e.style.opacity = '0';
+        }
+      });
+    };
 
     async function initMap(): Promise<void> {
       try {
@@ -298,6 +384,11 @@ function App() {
         map = new Map(document.getElementById('map') as HTMLElement, {
           center: { lat: center.lat, lng: center.lng },
           zoom: 13,
+          disableDefaultUI: true,
+          zoomControl: false,
+          scrollwheel: false,
+          streetViewControl: false,
+          // gestureHandling: 'none',
           mapId: crypto.randomUUID(),
         });
 
@@ -307,17 +398,47 @@ function App() {
           // addMarker(map, loc.lat, loc.lng, loc.name);
 
           const pinSVG = parser.parseFromString(pinSVGStr, 'image/svg+xml').documentElement;
+          // const pin = new PinElement({
+          //   glyph: `Marker ${i+1}`
+          // })
 
           const markerPayload = {
             map,
             position: { lat: loc.lat, lng: loc.lng },
+            // content: pin.element,
             content: pinSVG,
             // title: loc.name,
           };
 
-          console.log(markerPayload);
-
+          // console.log(markerPayload);
           const M = new AdvancedMarkerElement(markerPayload);
+
+          M.addListener('click', ({}: { e: MouseEvent; latLng: google.maps.LatLng }) => {
+            // console.log(e, latLng);
+            // console.log('tw', tracker);
+
+            if (tracker === 0) tracker = 1;
+            const ptarget: LocID = `#p${tracker}`;
+            const p = LocationData[ptarget];
+            if ('info' in p && p.info) {
+              p.info.close();
+            }
+            tl.fromTo(
+              ptarget,
+              { opacity: 1 },
+              { opacity: 0, ease: 'power2.inOut', ...randCoords() }
+            );
+            tracker = i;
+            // console.log('tn', tracker);
+            const target: LocID = `#p${tracker}`;
+            tl.fromTo(
+              target,
+              { opacity: 0, ...randCoords() },
+              { opacity: 1, ease: 'power2.inOut', x: 0, y: 0 }
+            );
+            // console.log(`Clicked marker: ${i} target: ${target}`);
+            panTarget(target);
+          });
           allMarkers.push(M);
         }
       } catch (e) {
@@ -327,13 +448,23 @@ function App() {
 
     await initMap();
 
-    console.log(allMarkers);
+    // for (let m = 0; m < allMarkers.length; m++) {
+    //   const marker = allMarkers[m];
+    //   marker.addListener('click', ({ e, latLng }) => {
+    //       const { target } = e;
+    //       console.log(e, latLng);
+    //       console.log(`Clicked marker: ${i}`);
+    //   });
+    //   console.log(marker);
+    // }
+
+    // console.log(allMarkers);
 
     const panelCont = document.getElementById('panelcont');
-    console.log(panelCont);
+    // console.log(panelCont);
     if (panelCont) {
-      console.log('Panel cont');
-      console.log(panelCont);
+      // console.log('Panel cont');
+      // console.log(panelCont);
       function scrolling(e: WheelEvent) {
         const delta = e.deltaY;
         if (panelCont) {
@@ -360,7 +491,6 @@ function App() {
       // });
     }
 
-
     const calcpn = (c: number): { p?: LocID; c: LocID; n?: LocID } => {
       if (c === 0 || c === 1) {
         return {
@@ -381,217 +511,252 @@ function App() {
       }
     };
 
-    const tl = gsap.timeline();
-    let tracker = 0;
+    function panTarget(target: LocID) {
+      if (target in LocationData) {
+        const tLoc = LocationData[target];
+        const coordinates = tLoc.coords;
+        if (isLatLng(coordinates)) {
+          panToLoc(map, coordinates);
+        }
+        if ('info' in tLoc && tLoc.info) {
+          tLoc.info.open({
+            anchor: allMarkers[tracker - 1],
+          });
+        }
+      } else {
+        console.warn(`Unknown target: ${target}`);
+      }
+    }
 
-    sections.forEach((section) => {
-      ScrollTrigger.create({
-        trigger: section,
-        scroller: '#panelcont',
-        start: 'top',
-        end: 'bottom',
-        // start: () => (section.offsetHeight < window.innerHeight ? 'top top' : 'bottom bottom'),
-        // markers: true,
-        // scrub: true,
-        // pin: true,
-        // pin: '.panel',
-        // pinReparent: true,
-        // pinSpacing: false,
-        // snap: 0.25,
-        onEnter: () => {
-          tracker++;
-          const target: LocID = `#p${tracker}`;
+    function animateNext() {
+      const pcn = calcpn(tracker);
 
-          if (target in LocationData) {
-            const tLoc = LocationData[target];
-            const coordinates = tLoc.coords;
-            if (isLatLng(coordinates)) {
-              panToLoc(map, coordinates);
-            }
-            if ('info' in tLoc && tLoc.info) {
-              tLoc.info.open({
-                anchor: allMarkers[tracker - 1],
-              });
-            }
-          }
-          // console.log(`Just entered panel #${tracker}`);
-          const pcn = calcpn(tracker);
-          // console.log(pcn);
-          if (pcn.p) {
-            const p = LocationData[pcn.p];
-            if ('info' in p && p.info) {
-              p.info.close();
-            }
-            if (tracker % 2 === 0) {
-              tl.to(pcn.p, { opacity: 0, x: 100 });
-            } else {
-              tl.to(pcn.p, { opacity: 0, x: -100 });
-            }
-          }
-          tl.to(pcn.c, { opacity: 1, x: 0 });
-        },
-        onLeaveBack: () => {
-          tracker--;
-          const target: LocID = `#p${tracker}`;
-          if (target in LocationData) {
-            const tLoc = LocationData[target];
-            const coordinates = tLoc.coords;
-            if (isLatLng(coordinates)) {
-              panToLoc(map, coordinates);
-            }
-          }
-          // console.log(`Just scrolled back to panel #${tracker}`);
-          const pcn = calcpn(tracker);
-          if (pcn.n) {
-            const n = LocationData[pcn.n];
-            if ('info' in n && n.info) {
-              n.info.close();
-            }
+      // console.log('Next pcn');
+      // console.log(pcn);
+      if (pcn.p) {
+        const p = LocationData[pcn.p];
+        if ('info' in p && p.info) {
+          p.info.close();
+        }
 
-            if (tracker % 2 === 0) {
-              tl.to(pcn.n, { opacity: 0, x: 100 });
-            } else {
-              tl.to(pcn.n, { opacity: 0, x: -100 });
-            }
-          }
-          tl.to(pcn.c, { opacity: 1, x: 0 });
-        },
-      });
+        tl.fromTo(pcn.p, { opacity: 1 }, { opacity: 0, ease: 'power2.inOut', ...randCoords() });
+
+        // if (tracker % 2 === 0) {
+        //   tl.fromTo(pcn.p, { opacity: 1, x: 0 }, { opacity: 0, x: -100 });
+        // } else {
+        //   tl.fromTo(pcn.p, { opacity: 1, x: 0 }, { opacity: 0, x: 100 });
+        // }
+      }
+      tl.fromTo(
+        pcn.c,
+        { opacity: 0, ...randCoords() },
+        { opacity: 1, ease: 'power2.inOut', x: 0, y: 0 }
+      );
+    }
+
+    function animatePrev() {
+      const pcn = calcpn(tracker);
+      if (pcn.n) {
+        const n = LocationData[pcn.n];
+        if ('info' in n && n.info) {
+          n.info.close();
+        }
+        tl.fromTo(pcn.n, { opacity: 1 }, { opacity: 0, ...randCoords(), ease: 'power2.inOut' });
+        // if (tracker % 2 === 0) {
+        //   tl.fromTo(pcn.n, { opacity: 1, x: 0 }, { opacity: 0, x: -100 });
+        // } else {
+        //   tl.fromTo(pcn.n, { opacity: 1, x: 0 }, { opacity: 0, x: 100 });
+        // }
+      }
+      tl.fromTo(
+        pcn.c,
+        { opacity: 0, ...randCoords() },
+        { opacity: 1, ease: 'power2.inOut', x: 0, y: 0 }
+      );
+      // tl.fromTo(pcn.c, { opacity: 0, x: 100 }, { opacity: 1, x: 0 });
+    }
+
+    function handleNext() {
+      // console.log('tw', tracker);
+      if (tracker === numPanels) tracker = 1;
+      else tracker++;
+      // console.log('tn', tracker);
+      const target: LocID = `#p${tracker}`;
+      panTarget(target);
+      animateNext();
+    }
+
+    function handlePrev() {
+      // console.log('tw', tracker);
+      if (tracker === 1) tracker = numPanels;
+      else tracker--;
+      // console.log('tn', tracker);
+      const target: LocID = `#p${tracker}`;
+      panTarget(target);
+      animatePrev();
+    }
+
+    arrowRight.onclick = handleNext;
+    arrowLeft.onclick = handlePrev;
+
+    window.addEventListener('keydown', (e) => {
+      switch (e.key) {
+        // case 'a':
+        //   handlePrev();
+        //   break;
+        // case 'd':
+        //   handleNext();
+        //   break;
+        case 'ArrowLeft':
+          handlePrev();
+          break;
+        case 'ArrowRight':
+          handleNext();
+          break;
+        default:
+          break;
+      }
     });
-
   });
 
   return (
     <>
+      {popup}
       <main>
-        <section id="locpanel" class="pico-background-zin-900">
+        <section id="locpanel">
           <div id="panelcont">
-            <div id="wrapper">
-              <div id="toppanelspacer" class="pico-background-zinc-800">
+            {/* <div id="toppanelspacer" class="pico-background-zinc-800">
                 Scroll Down Anywhere To Begin <br />
                 🠋
-              </div>
-              <div id="p1" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>TECHSPO New York Technology Expo</h3>
-                </article>
-              </div>
-              <div id="p2" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>International Conference on Cyber Security (ICCS 2025)</h3>
-                </article>
-              </div>
-              <div id="p3" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>
-                    International Conference on Research in Science, Engineering and Technology
-                  </h3>
-                </article>
-              </div>
-              <div id="p4" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>Spyscape</h3>
-                </article>
-              </div>
-              <div id="p5" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>South Street Seaport Museum and its collection</h3>
-                </article>
-              </div>
-              <div id="p6" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>VR World</h3>
-                </article>
-              </div>
-              <div id="p7" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>The Rooftop at Pier 17</h3>
-                </article>
-              </div>
-              <div id="p8" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>Javits Center New York International Auto Show</h3>
-                </article>
-              </div>
-              <div id="p9" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>Ninth Avenue International Food Festival</h3>
-                </article>
-              </div>
-              <div id="p10" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>New York Comic-Con</h3>
-                </article>
-              </div>
-              <div id="p11" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>New York City Wine & Food Festival</h3>
-                </article>
-              </div>
-              <div id="p12" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>The Governors Ball Music Festival</h3>
-                </article>
-              </div>
-              <div id="p13" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>The Armory Show</h3>
-                </article>
-              </div>
-              <div id="p14" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>Global Conference on Human Resource Management</h3>
-                </article>
-              </div>
-              <div id="p15" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>Youth Marketing Strategy</h3>
-                </article>
-              </div>
-              <div id="p16" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>UA3 Youth Empowerment Program & Young Shark Competition</h3>
-                </article>
-              </div>
-              <div id="p17" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>The Winter Show</h3>
-                </article>
-              </div>
-              <div id="p18" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>The Harlem Bazaar</h3>
-                </article>
-              </div>
-              <div id="p19" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>New York Transit Museum and its collection</h3>
-                </article>
-              </div>
-              <div id="p20" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>Brooklyn Community Board</h3>
-                </article>
-              </div>
-              <div id="p21" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>Community Board Annual Youth Conference</h3>
-                </article>
-              </div>
-              <div id="p22" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>Museum of the Moving Image</h3>
-                </article>
-              </div>
-              <div id="p23" class="panel">
-                <article class="pico-background-zinc-900">
-                  <h3>Forest Hills Stadium</h3>
-                </article>
-              </div>
+              </div> */}
+            <div id="p1" class="panel">
+              <article>
+                <h3>TECHSPO New York Technology Expo</h3>
+              </article>
+            </div>
+            <div id="p2" class="panel">
+              <article>
+                <h3>International Conference on Cyber Security (ICCS 2025)</h3>
+              </article>
+            </div>
+            <div id="p3" class="panel">
+              <article>
+                <h3>International Conference on Research in Science, Engineering and Technology</h3>
+              </article>
+            </div>
+            <div id="p4" class="panel">
+              <article>
+                <h3>Spyscape</h3>
+              </article>
+            </div>
+            <div id="p5" class="panel">
+              <article>
+                <h3>South Street Seaport Museum and its collection</h3>
+              </article>
+            </div>
+            <div id="p6" class="panel">
+              <article>
+                <h3>VR World</h3>
+              </article>
+            </div>
+            <div id="p7" class="panel">
+              <article>
+                <h3>The Rooftop at Pier 17</h3>
+              </article>
+            </div>
+            <div id="p8" class="panel">
+              <article>
+                <h3>Javits Center New York International Auto Show</h3>
+              </article>
+            </div>
+            <div id="p9" class="panel">
+              <article>
+                <h3>Ninth Avenue International Food Festival</h3>
+              </article>
+            </div>
+            <div id="p10" class="panel">
+              <article>
+                <h3>New York Comic-Con</h3>
+              </article>
+            </div>
+            <div id="p11" class="panel">
+              <article>
+                <h3>New York City Wine & Food Festival</h3>
+              </article>
+            </div>
+            <div id="p12" class="panel">
+              <article>
+                <h3>The Governors Ball Music Festival</h3>
+              </article>
+            </div>
+            <div id="p13" class="panel">
+              <article>
+                <h3>The Armory Show</h3>
+              </article>
+            </div>
+            <div id="p14" class="panel">
+              <article>
+                <h3>Global Conference on Human Resource Management</h3>
+              </article>
+            </div>
+            <div id="p15" class="panel">
+              <article>
+                <h3>Youth Marketing Strategy</h3>
+              </article>
+            </div>
+            <div id="p16" class="panel">
+              <article>
+                <h3>UA3 Youth Empowerment Program & Young Shark Competition</h3>
+              </article>
+            </div>
+            <div id="p17" class="panel">
+              <article>
+                <h3>The Winter Show</h3>
+              </article>
+            </div>
+            <div id="p18" class="panel">
+              <article>
+                <h3>The Harlem Bazaar</h3>
+              </article>
+            </div>
+            <div id="p19" class="panel">
+              <article>
+                <h3>New York Transit Museum and its collection</h3>
+              </article>
+            </div>
+            <div id="p20" class="panel">
+              <article>
+                <h3>Brooklyn Community Board</h3>
+              </article>
+            </div>
+            <div id="p21" class="panel">
+              <article>
+                <h3>Community Board Annual Youth Conference</h3>
+              </article>
+            </div>
+            <div id="p22" class="panel">
+              <article>
+                <h3>Museum of the Moving Image</h3>
+              </article>
+            </div>
+            <div id="p23" class="panel">
+              <article>
+                <h3>Forest Hills Stadium</h3>
+              </article>
             </div>
           </div>
         </section>
         <section id="map"></section>
+
+        {arrowLeft}
+        {arrowRight}
+        {popupTrigger}
+        {/* <div id="arrowleft" class="arrow">
+          {arrowLeft}
+        </div>
+        <div id="arrowright" class="arrow">
+          {arrowRight}
+        </div> */}
       </main>
     </>
   );

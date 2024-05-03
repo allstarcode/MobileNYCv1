@@ -1,0 +1,304 @@
+@font-face
+  font-family: 'Helvetica Now Display Regular', sans-serif
+  src: url('/fonts/HelveticaNowDisplay-Regular.ttf')
+
+
+@font-face
+  font-family: 'Helvetica Now Display Medium', sans-serif
+  src: url('/fonts/HelveticaNowDisplay-Medium.ttf')
+
+
+@font-face
+  font-family: 'Helvetica Now Display Bold', sans-serif
+  src: url('/fonts/HelveticaNowDisplay-Bold.ttf')
+
+@mixin debug($color, $thick: 1px, $enable: true)
+  @if $enable
+    border: solid $thick $color
+
+.b-font
+  font-family: 'Helvetica Now Display Regular'
+
+.st-font
+  font-family: 'Helvetica Now Display Medium'
+
+.t-font
+  font-family: 'Helvetica Now Display Bold'
+
+::backdrop
+  background-image: linear-gradient(135deg, #51c1e9,#FFB700,#51c1e9,#ffb700)
+  opacity: 0.85
+
+
+/* Tags */
+main
+  font-family: 'Helvetica Now Display Regular'
+  position: relative
+  height: 100%
+  width: 100%
+  /* border: solid 3px red */
+  display: flex
+  align-items: center
+  scroll-behavior: auto
+
+
+progress
+  position: fixed
+  bottom: 0
+  height: 15px
+  border-radius: 10px
+  width: 100%
+  left: 3px
+
+article
+  background-color: #fff
+  padding: 1rem 2rem
+
+h3
+  text-align: center
+
+
+dialog
+  border: none
+  border-radius: 2rem
+  box-shadow: 0 0 #000000, 0 0 #000000, 0 25px 50px -12px rgba(0,0,0,0.25)
+  padding: 1.5rem
+  max-width: 425px
+
+
+
+/* CSS */
+.coolbtn
+  align-items: center
+  background-image: linear-gradient(144deg,#7C52F9, #4200FF 50%, #51c1e9)
+  border: 0
+  border-radius: 8px
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px
+  box-sizing: border-box
+  color: #FFFFFF
+  display: flex
+  font-size: 20px
+  justify-content: center
+  line-height: 1em
+  // max-width: 100%
+  // width: 40px
+  padding: 3px
+  user-select: none
+  -webkit-user-select: none
+  cursor: pointer
+
+
+.coolbtn:active,
+.coolbtn:hover
+  outline: 0
+
+
+.coolbtn span
+  background-color: rgb(5, 6, 45)
+  padding: 1rem 2rem
+  border-radius: 6px
+  width: 100%
+  height: 100%
+  transition: 300ms
+
+
+.coolbtn:hover span
+  background: none
+
+
+/* IDs */
+
+#map
+  height: 100%
+  width: 100%
+  top: 0
+  left: 0
+  position: absolute
+  /* border: solid 3px greenyellow */
+  /* z-index: -1 */
+
+
+#locpanel
+  @include debug(darkcyan, 3px)
+  // z-index: 10
+  // height: 70cqh
+  // width: 20vw
+  // border-radius: 3%
+  padding: 5rem 3rem
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: flex-start
+  align-items: center
+
+
+#panelcont
+  @include debug(purple, 1px, false)
+  position: relative
+  // scrollbar-width: none
+  // overflow-x: hidden
+  // overflow-y: scroll
+  max-height: 100%
+  height: 40%
+  width: 30%
+  // position: relative
+  z-index: 10
+  display: flex
+  justify-content: center
+  align-items: center
+
+
+#wrapper
+  height: 400cqh
+  width: 100%
+
+
+#toppanelspacer
+  width: 100%
+  /* position: absolute */
+  /* height: 12rem */
+  text-align: center
+  padding: 0.5rem
+  border-radius: 1rem
+  background-color: #fff
+
+
+#bottompanelspacer
+  width: 100%
+  height: 32rem
+
+#arrowleft
+  position: absolute
+  bottom: 10px
+  left: 30vw
+
+#arrowright
+  position: absolute
+  bottom: 10px
+  right: 30vw
+
+
+@media all and (min-width: 768px)
+  #popuptrigger
+    display: block
+    position: absolute
+    bottom: 10px
+    right: 3px
+    font-weight: bolder
+    background: #51c1e9
+    font-size: 3rem
+    padding: 1rem
+    border: solid 0.25rem #000000
+    border-radius: 5rem
+    line-height: 1
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    svg
+      height: 72px
+      width: 72px
+
+@media all and (max-width: 768px)
+  #popuptrigger
+    display: none !important
+
+#dontshow
+  appearance: none
+  position: relative
+  width: 30px
+  height: 30px
+  border-radius: 5px
+  border: 1px solid #dad8d8
+  cursor: pointer
+  &:checked
+    background-image: linear-gradient(135deg, #51c1e9 0%, #ffb700 40%, #51c1e9 98%)
+  &::before
+    content: ''
+    position: relative
+    top: 50%
+    left: 60%
+    transform: translate(-50%, -50%)
+    width: 100%
+    height: 100%
+    pointer-events: none
+    background-image: url('/checkmark.svg')
+    background-size: contain
+    background-repeat: no-repeat
+    display: none
+  &:checked::before
+    display: block
+
+/* Classes */
+
+.popupfoot
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  div
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+
+.panel
+  /* border: solid 1px red */
+  /* margin: 5rem 0 */
+  /* height: 90vh !important */
+  height: 450px !important
+  // padding-top: 10rem
+  font-family: 'Helvetica Now Display Regular'
+  width: 100%
+  position: absolute
+  box-sizing: border-box
+  border-radius: 3%
+  opacity: 0
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.arrow
+  $arrowsize: 128px
+  z-index: 15
+  cursor: pointer
+  height: $arrowsize
+  width: $arrowsize
+
+
+
+/* .panel:nth-child(n)
+  border: solid 1px white
+ */
+
+// #p1
+//   background-color: lightgray !important
+
+// #p2
+//   background-color: lightcoral
+
+// #p3
+//   background-color: lightcyan
+
+// #p4
+//   background-color: lightgoldenrodyellow
+
+// #p5
+//   background-color: lightgreen
+
+// #p6
+//   background-color: lightpink
+
+// #p7
+//   background-color: lightsalmon
+
+// #p8
+//   background-color: lightseagreen
+
+// #p9
+//   background-color: lightskyblue
+
+// #p10
+//   background-color: lightslategray
