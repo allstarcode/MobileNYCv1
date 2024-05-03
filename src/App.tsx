@@ -89,16 +89,12 @@ function App() {
 
     const savedShow = window.localStorage.getItem('showpopup');
     let showPopup = savedShow && savedShow === 'no';
-    // console.log(savedShow, showPopup);
     showPopup ||= false;
-
-    // console.log('Show popup?', showPopup);
 
     if (showPopup) {
       popup.showModal();
     }
     popupBtn.onclick = () => {
-      // console.log("Don't show again?", popupChk.checked);
       popup.close();
       if (popupChk.checked) {
         window.localStorage.setItem('showpopup', 'no');
@@ -106,6 +102,8 @@ function App() {
         window.localStorage.setItem('showpopup', 'yes');
       }
     };
+
+    popupTrigger.onclick = () => popup.showModal();
 
     const { LatLng } = (await google.maps.importLibrary('core')) as google.maps.CoreLibrary;
     const { InfoWindow } = (await google.maps.importLibrary(
@@ -355,18 +353,6 @@ function App() {
     };
     const numPanels = Object.values(LocationData).length;
 
-    // console.log('Tracker start: ', tracker);
-
-    const allOpacity0 = (exclude: LocID) => {
-      Object.keys(LocationData).forEach((k) => {
-        if (k === exclude) return;
-        const key = k as unknown as LocID;
-        const e = document.querySelector(key) as unknown as HTMLElement | null;
-        if (e) {
-          e.style.opacity = '0';
-        }
-      });
-    };
 
     async function initMap(): Promise<void> {
       try {
