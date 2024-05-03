@@ -1,12 +1,10 @@
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { createEffect } from 'solid-js';
 import './App.sass';
 
 type LocID = `#p${number}`;
 
 function App() {
-  gsap.registerPlugin(ScrollTrigger);
 
   // const markerURL = 'https://i.imgur.com/cGQh8J8.png';
   // const markerImgEle = document.createElement('img')
@@ -410,13 +408,9 @@ function App() {
             // title: loc.name,
           };
 
-          // console.log(markerPayload);
           const M = new AdvancedMarkerElement(markerPayload);
 
           M.addListener('click', ({}: { e: MouseEvent; latLng: google.maps.LatLng }) => {
-            // console.log(e, latLng);
-            // console.log('tw', tracker);
-
             if (tracker === 0) tracker = 1;
             const ptarget: LocID = `#p${tracker}`;
             const p = LocationData[ptarget];
@@ -429,14 +423,12 @@ function App() {
               { opacity: 0, ease: 'power2.inOut', ...randCoords() }
             );
             tracker = i;
-            // console.log('tn', tracker);
             const target: LocID = `#p${tracker}`;
             tl.fromTo(
               target,
               { opacity: 0, ...randCoords() },
               { opacity: 1, ease: 'power2.inOut', x: 0, y: 0 }
             );
-            // console.log(`Clicked marker: ${i} target: ${target}`);
             panTarget(target);
           });
           allMarkers.push(M);
@@ -448,47 +440,15 @@ function App() {
 
     await initMap();
 
-    // for (let m = 0; m < allMarkers.length; m++) {
-    //   const marker = allMarkers[m];
-    //   marker.addListener('click', ({ e, latLng }) => {
-    //       const { target } = e;
-    //       console.log(e, latLng);
-    //       console.log(`Clicked marker: ${i}`);
-    //   });
-    //   console.log(marker);
-    // }
-
-    // console.log(allMarkers);
-
     const panelCont = document.getElementById('panelcont');
-    // console.log(panelCont);
     if (panelCont) {
-      // console.log('Panel cont');
-      // console.log(panelCont);
       function scrolling(e: WheelEvent) {
         const delta = e.deltaY;
         if (panelCont) {
           panelCont.scrollBy(0, delta);
         }
-        // if (!map) {
-        //   console.warn('Map not found in scroller');
-        //   return;
-        // }
-        // let current = map.getZoom();
-        // if (!current) {
-        //   console.warn('Unable to get current map zoom');
-        //   return;
-        // }
-        // map.setZoom(current - 0.1);
       }
       window.addEventListener('wheel', scrolling);
-      // panelCont.addEventListener(\'scroll', () => {
-      //   console.log(panelCont);
-      //   const st = panelCont.scrollTop;
-      //   const sh = panelCont.scrollHeight;
-      //   const percent = (st / (sh - panelCont.clientHeight)) * 100;
-      //   progress.value = percent;
-      // });
     }
 
     const calcpn = (c: number): { p?: LocID; c: LocID; n?: LocID } => {
@@ -530,22 +490,12 @@ function App() {
 
     function animateNext() {
       const pcn = calcpn(tracker);
-
-      // console.log('Next pcn');
-      // console.log(pcn);
       if (pcn.p) {
         const p = LocationData[pcn.p];
         if ('info' in p && p.info) {
           p.info.close();
         }
-
         tl.fromTo(pcn.p, { opacity: 1 }, { opacity: 0, ease: 'power2.inOut', ...randCoords() });
-
-        // if (tracker % 2 === 0) {
-        //   tl.fromTo(pcn.p, { opacity: 1, x: 0 }, { opacity: 0, x: -100 });
-        // } else {
-        //   tl.fromTo(pcn.p, { opacity: 1, x: 0 }, { opacity: 0, x: 100 });
-        // }
       }
       tl.fromTo(
         pcn.c,
@@ -562,18 +512,12 @@ function App() {
           n.info.close();
         }
         tl.fromTo(pcn.n, { opacity: 1 }, { opacity: 0, ...randCoords(), ease: 'power2.inOut' });
-        // if (tracker % 2 === 0) {
-        //   tl.fromTo(pcn.n, { opacity: 1, x: 0 }, { opacity: 0, x: -100 });
-        // } else {
-        //   tl.fromTo(pcn.n, { opacity: 1, x: 0 }, { opacity: 0, x: 100 });
-        // }
       }
       tl.fromTo(
         pcn.c,
         { opacity: 0, ...randCoords() },
         { opacity: 1, ease: 'power2.inOut', x: 0, y: 0 }
       );
-      // tl.fromTo(pcn.c, { opacity: 0, x: 100 }, { opacity: 1, x: 0 });
     }
 
     function handleNext() {
