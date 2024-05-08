@@ -154,7 +154,7 @@ function App() {
           coords: new LatLng(40.693875799313254, -73.98852178739864),
           category: 'Event',
           info: new InfoWindow({
-            content: `<article><header>TECHSPO New York Technology Expo</header>9:00am, Thursday, 9:00am, Thursday, May 16th, 2024<br /><br /><p>"- Two day technology expo May 16 – 17, 2024 at New York Marriott at the Brooklyn Bridge Hotel in New York City\n- Brings together some of the best developers, brands, marketers, technology providers, designers, and innovators looking to set the pace in an advanced world of technology. \n- Exhibitors showcase the next generation of advances in technology & innovation, \n- Learn how these evolving technologies will impact your business for greater growth."</p></article>`,
+            content: `<article><header>TECHSPO New York Technology Expo</header>9:00am, Thursday, 9:00am, Thursday, May 16th, 2024<br /><br /><p>- Two day technology expo May 16 – 17, 2024 at New York Marriott at the Brooklyn Bridge Hotel in New York City<br />- Brings together some of the best developers, brands, marketers, technology providers, designers, and innovators looking to set the pace in an advanced world of technology. <br />- Exhibitors showcase the next generation of advances in technology & innovation, <br />- Learn how these evolving technologies will impact your business for greater growth.</p></article>`,
           }),
         },
       ],
@@ -167,7 +167,7 @@ function App() {
           coords: new LatLng(40.77116790008878, -73.98517140459104),
           category: 'Event',
           info: new InfoWindow({
-            content: `<article><header>International Conference on Cyber Security (ICCS 2025)</header>2025<br /><br /><p>"Topics covered:\n- Cyber Risks and International Investments\n- Cloud Native and Digital Transformation\n- Cyber Risks to Election Systems\n- Trojan Attack and Backdoors in Pervasive Artificial Intelligence Systems\n- Blockchain and Security\n- Cyber Prosecution and International Crossroads\n- Transforming Corporate Information Security"</p></article>`,
+            content: `<article><header>International Conference on Cyber Security (ICCS 2025)</header>2025<br /><br /><p>Topics covered:<br />- Cyber Risks and International Investments<br />- Cloud Native and Digital Transformation<br />- Cyber Risks to Election Systems<br />- Trojan Attack and Backdoors in Pervasive Artificial Intelligence Systems<br />- Blockchain and Security<br />- Cyber Prosecution and International Crossroads<br />- Transforming Corporate Information Security</p></article>`,
           }),
         },
       ],
@@ -180,7 +180,7 @@ function App() {
           coords: new LatLng(40.75950665756728, -73.8325264278469),
           category: 'Event',
           info: new InfoWindow({
-            content: `<article><header>International Conference on Research in Science, Engineering and Technology</header>2024-05-17 to 2024-05-18<br /><br /><p>"International Conference on Research in Science, Engineering and Technology to bring together innovative academics and industrial experts in the field of Science, Engineering and Technology to a common forum\nhttps://wrfer.org/Conference/32425/ICRSET/"</p></article>`,
+            content: `<article><header>International Conference on Research in Science, Engineering and Technology</header>2024-05-17 to 2024-05-18<br /><br /><p>International Conference on Research in Science, Engineering and Technology to bring together innovative academics and industrial experts in the field of Science, Engineering and Technology to a common forum<br />https://wrfer.org/Conference/32425/ICRSET/</p></article>`,
           }),
         },
       ],
@@ -193,7 +193,7 @@ function App() {
           coords: new LatLng(40.765424063874526, -73.98359815668267),
           category: 'Museum',
           info: new InfoWindow({
-            content: `<article><header>Spyscape</header>Always<br /><br /><p>"Explore hidden worlds, break codes, run surveillance and spot liars while a system developed with MI6 experts reveals your personal spy role and profile. You’ll jump, climb, throw and dodge in fun immersive challenges developed with CIA experts to stretch your physical and mental agility with each visit."</p></article>`,
+            content: `<article><header>Spyscape</header>Always<br /><br /><p>Explore hidden worlds, break codes, run surveillance and spot liars while a system developed with MI6 experts reveals your personal spy role and profile. You’ll jump, climb, throw and dodge in fun immersive challenges developed with CIA experts to stretch your physical and mental agility with each visit.</p></article>`,
           }),
         },
       ],
@@ -206,7 +206,7 @@ function App() {
           coords: new LatLng(40.70674760157036, -74.00346485483267),
           category: 'Museum',
           info: new InfoWindow({
-            content: `<article><header>South Street Seaport Museum and its collection</header>Always<br /><br /><p>"Holds significant historical value in the neighboring Financial District and is home to some of the oldest buildings in Downtown Manhattan, including a large collection of early 19th-century commercial buildings."</p></article>`,
+            content: `<article><header>South Street Seaport Museum and its collection</header>Always<br /><br /><p>Holds significant historical value in the neighboring Financial District and is home to some of the oldest buildings in Downtown Manhattan, including a large collection of early 19th-century commercial buildings.</p></article>`,
           }),
         },
       ],
@@ -219,7 +219,7 @@ function App() {
           coords: new LatLng(40.748350947997984, -73.98384542817237),
           category: 'Attraction',
           info: new InfoWindow({
-            content: `<article><header>VR World</header>Always<br /><br /><p>"North America's largest mixed reality playground, with over 50 immersive VR experiences from art and film to gaming and multiplayer features."</p></article>`,
+            content: `<article><header>VR World</header>Always<br /><br /><p>North America's largest mixed reality playground, with over 50 immersive VR experiences from art and film to gaming and multiplayer features.</p></article>`,
           }),
         },
       ],
@@ -232,7 +232,7 @@ function App() {
           coords: new LatLng(40.705624935951505, -74.00168571806202),
           category: 'Attraction',
           info: new InfoWindow({
-            content: `<article><header>The Rooftop at Pier 17</header><br /><br /><p>"Sunset views with outdoor concert experience"</p></article>`,
+            content: `<article><header>The Rooftop at Pier 17</header><br /><br /><p>Sunset views with outdoor concert experience</p></article>`,
           }),
         },
       ],
@@ -245,7 +245,7 @@ function App() {
           coords: new LatLng(40.75760735955322, -74.00225452599453),
           category: 'Event',
           info: new InfoWindow({
-            content: `<article><header>Javits Center New York International Auto Show</header><br /><br /><p>"Car culture\r\nTech in automotive world\r\nTech advancements \r\nTech variations from across the world\r"</p></article>`,
+            content: `<article><header>Javits Center New York International Auto Show</header><br /><br /><p>Car culture<br />Tech in automotive world<br />Tech advancements <br />Tech variations from across the world</p></article>`,
           }),
         },
       ],
@@ -261,7 +261,7 @@ function App() {
             content: `<article><header>Ninth Avenue International Food Festival</header>Saturday and Sunday | May 18 & 19, 2024
 
 10am-6pm | 9th Avenue (42nd-57th Streets)
-<br /><br /><p>"In Hell’s Kitchen, lined with an array of cuisines and beverages, for one of NYC’s oldest, largest food festivals.\r\nMission of offering a variety of events and promotions related to the Merchants of Ninth Avenue and Hell's Kitchen in New York City\r"</p></article>`,
+<br /><br /><p>In Hell’s Kitchen, lined with an array of cuisines and beverages, for one of NYC’s oldest, largest food festivals.<br />Mission of offering a variety of events and promotions related to the Merchants of Ninth Avenue and Hell's Kitchen in New York City</p></article>`,
           }),
         },
       ],
@@ -275,7 +275,7 @@ function App() {
           category: 'Event',
           info: new InfoWindow({
             content: `<article><header>New York Comic-Con</header>October 17-20, 2024
-<br /><br /><p>"Fan convention dedicated to Western comics, graphic novels, anime, manga, video games, cosplay, toys, movies, and television. It was first held in 2006.\r\nNorth AMerica’s most attended convention\r"</p></article>`,
+<br /><br /><p>Fan convention dedicated to Western comics, graphic novels, anime, manga, video games, cosplay, toys, movies, and television. It was first held in 2006.<br />North AMerica’s most attended convention</p></article>`,
           }),
         },
       ],
@@ -289,7 +289,7 @@ function App() {
           category: 'Event',
           info: new InfoWindow({
             content: `<article><header>The Governors Ball Music Festival</header>Fri, Jun 7, 2024 – Sun, Jun 9, 2024
-<br /><br /><p>"Dramatically set in the middle of the East River on Randall’s Island just off of Manhattan\r\n3-day festival features a wide-ranging mix of bands that range from indie rock to hip-hop\r\nIn between sets, attendees can sample treats from New York’s best food trucks, try their luck with a lawn game or just take in the sweeping views of the city\r"</p></article>`,
+<br /><br /><p>Dramatically set in the middle of the East River on Randall’s Island just off of Manhattan<br />3-day festival features a wide-ranging mix of bands that range from indie rock to hip-hop<br />In between sets, attendees can sample treats from New York’s best food trucks, try their luck with a lawn game or just take in the sweeping views of the city</p></article>`,
           }),
         },
       ],
@@ -302,7 +302,7 @@ function App() {
           coords: new LatLng(40.75770488180689, -74.00172881295774),
           category: 'Event',
           info: new InfoWindow({
-            content: `<article><header>The Armory Show</header>September 6–8, 2024<br /><br /><p>"A cornerstone of New York’s cultural landscape since its founding in 1994, The Armory Show brings the world’s leading international contemporary and modern art galleries to New York each year\r\nThe fair plays a leading role in the city’s position as an important cultural capital through elevated presentations, thoughtful programming, curatorial leadership, meaningful institutional partnerships, and engaging public art activations\r"</p></article>`,
+            content: `<article><header>The Armory Show</header>September 6–8, 2024<br /><br /><p>A cornerstone of New York’s cultural landscape since its founding in 1994, The Armory Show brings the world’s leading international contemporary and modern art galleries to New York each year<br />The fair plays a leading role in the city’s position as an important cultural capital through elevated presentations, thoughtful programming, curatorial leadership, meaningful institutional partnerships, and engaging public art activations</p></article>`,
           }),
         },
       ],
@@ -315,7 +315,7 @@ function App() {
           coords: new LatLng(40.75003962352458, -73.98663159630443),
           category: 'Event',
           info: new InfoWindow({
-            content: `<article><header>Global Conference on Human Resource Management</header>Friday, June 7, 2024 at 4:00 PM<br /><br /><p>"Extends a warm invitation to professionals and experts from a spectrum of fields, including academia, research, policymaking, human resource management, and labor law\r\nThe conference provides a platform for attendees to learn from each other, collaborate on research endeavors, and establish professional networks\r"</p></article>`,
+            content: `<article><header>Global Conference on Human Resource Management</header>Friday, June 7, 2024 at 4:00 PM<br /><br /><p>Extends a warm invitation to professionals and experts from a spectrum of fields, including academia, research, policymaking, human resource management, and labor law<br />The conference provides a platform for attendees to learn from each other, collaborate on research endeavors, and establish professional networks</p></article>`,
           }),
         },
       ],
@@ -328,7 +328,7 @@ function App() {
           coords: new LatLng(40.66106084122166, -74.00010146627211),
           category: 'Event',
           info: new InfoWindow({
-            content: `<article><header>Youth Marketing Strategy</header>2024 Date Passed<br /><br /><p>"YMS NYC is America's largest youth marketing festival, focused on how brands can better understand and target the Gen Z market.\nLeading marketers from top brands and agencies share their most effective marketing strategies"</p></article>`,
+            content: `<article><header>Youth Marketing Strategy</header>2024 Date Passed<br /><br /><p>YMS NYC is America's largest youth marketing festival, focused on how brands can better understand and target the Gen Z market.<br />Leading marketers from top brands and agencies share their most effective marketing strategies</p></article>`,
           }),
         },
       ],
@@ -341,7 +341,7 @@ function App() {
           coords: new LatLng(40.72389592931645, -73.99239500266275),
           category: 'Event',
           info: new InfoWindow({
-            content: `<article><header>UA3 Youth Empowerment Program & Young Shark Competition</header>Multiple dates: https://www.eventbrite.com/e/ua3-youth-empowerment-program-young-shark-competition-tickets-818641216917<br /><br /><p>"Provides high school aged and college school aged students with an understanding of emotional wellness and provide resources that will assist in expressing themselves and supporting their friends and coping mechanisms for dealing with stress and mental health difficulties as well as develop beneficial health habits. \r\nDYCD calls all youth aged 14 to 24 to apply for the Young Sharks Competition! Throughout the 14-week workshop starting in February, participants will have the unique opportunity to start their own business. The journey involves crafting a product design, developing a business plan, constructing a prototype, etc with step-by step guidance.This competition offers Teams the chance to win up to $2500 in seed funding for your innovative business idea\r"</p></article>`,
+            content: `<article><header>UA3 Youth Empowerment Program & Young Shark Competition</header>Multiple dates: https://www.eventbrite.com/e/ua3-youth-empowerment-program-young-shark-competition-tickets-818641216917<br /><br /><p>Provides high school aged and college school aged students with an understanding of emotional wellness and provide resources that will assist in expressing themselves and supporting their friends and coping mechanisms for dealing with stress and mental health difficulties as well as develop beneficial health habits. <br />DYCD calls all youth aged 14 to 24 to apply for the Young Sharks Competition! Throughout the 14-week workshop starting in February, participants will have the unique opportunity to start their own business. The journey involves crafting a product design, developing a business plan, constructing a prototype, etc with step-by step guidance.This competition offers Teams the chance to win up to $2500 in seed funding for your innovative business idea</p></article>`,
           }),
         },
       ],
@@ -354,7 +354,7 @@ function App() {
           coords: new LatLng(40.767413210616034, -73.9654635584796),
           category: 'Event',
           info: new InfoWindow({
-            content: `<article><header>The Winter Show</header>Mainly every january<br /><br /><p>"Each winter, the most prestigious antiques show in America comes to the Park Avenue Armory. Formerly known as the Winter Antiques Show, it features a selection of pieces from ancient times through the art deco movement and beyond, and also serves as a benefit for the East Side House Settlement."</p></article>`,
+            content: `<article><header>The Winter Show</header>Mainly every january<br /><br /><p>Each winter, the most prestigious antiques show in America comes to the Park Avenue Armory. Formerly known as the Winter Antiques Show, it features a selection of pieces from ancient times through the art deco movement and beyond, and also serves as a benefit for the East Side House Settlement.</p></article>`,
           }),
         },
       ],
@@ -367,7 +367,7 @@ function App() {
           coords: new LatLng(40.8204446167838, -73.95896570265869),
           category: 'Event',
           info: new InfoWindow({
-            content: `<article><header>The Harlem Bazaar</header>Multiple dates: https://www.eventbrite.com/e/uptown-night-market-tickets-767640010937<br /><br /><p>"The market is a showcase of the best of Uptown’s food, art, and music scene in the great outdoors\r\nFeatures a mixture of the city’s best creators, designers, inventors, artists, and visionaries, selling everything from unique clothing and hand-crafted jewelry to tasty bites and intriguing artwork\r"</p></article>`,
+            content: `<article><header>The Harlem Bazaar</header>Multiple dates: https://www.eventbrite.com/e/uptown-night-market-tickets-767640010937<br /><br /><p>The market is a showcase of the best of Uptown’s food, art, and music scene in the great outdoors<br />Features a mixture of the city’s best creators, designers, inventors, artists, and visionaries, selling everything from unique clothing and hand-crafted jewelry to tasty bites and intriguing artwork</p></article>`,
           }),
         },
       ],
@@ -380,7 +380,7 @@ function App() {
           coords: new LatLng(40.69066762053103, -73.99018045278099),
           category: 'Museum',
           info: new InfoWindow({
-            content: `<article><header>New York Transit Museum and its collection</header>Always open<br /><br /><p>"Tells the story of the city's public transportation history, particularly emphasizing the NYC Subway and gives a front row seat to fascinating insight into the development and evolution of the city's subway system"</p></article>`,
+            content: `<article><header>New York Transit Museum and its collection</header>Always open<br /><br /><p>Tells the story of the city's public transportation history, particularly emphasizing the NYC Subway and gives a front row seat to fascinating insight into the development and evolution of the city's subway system</p></article>`,
           }),
         },
       ],
@@ -394,7 +394,7 @@ function App() {
           category: 'Event',
           info: new InfoWindow({
             content: `<article><header>Community Board Annual Youth Conference</header>2025
-https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excellent opportunity for people ages 14-21 to make valuable connections for the summer and beyond. Every year, approximately 50 New York City agencies, businesses and community organizations provide Youth Conference attendees with information about jobs, internships, career readiness, afterschool programs, college admissions and more! \r\nAttendees can apply for positions and programs on the spot. They will also be able to build their skills by participating in mock interviews with Brooklyn VIPs.\r"</p></article>`,
+https://www.cb14youthconference.nyc/<br /><br /><p>The conference is an excellent opportunity for people ages 14-21 to make valuable connections for the summer and beyond. Every year, approximately 50 New York City agencies, businesses and community organizations provide Youth Conference attendees with information about jobs, internships, career readiness, afterschool programs, college admissions and more! <br />Attendees can apply for positions and programs on the spot. They will also be able to build their skills by participating in mock interviews with Brooklyn VIPs.</p></article>`,
           }),
         },
       ],
@@ -407,7 +407,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           coords: new LatLng(40.75645914961474, -73.92387450080734),
           category: 'Museum',
           info: new InfoWindow({
-            content: `<article><header>Museum of the Moving Image</header>Always open<br /><br /><p>"Interactive museum experience where visitors make their own digital clips, produce, present and star in their own movies, shorts and TV shows"</p></article>`,
+            content: `<article><header>Museum of the Moving Image</header>Always open<br /><br /><p>Interactive museum experience where visitors make their own digital clips, produce, present and star in their own movies, shorts and TV shows</p></article>`,
           }),
         },
       ],
@@ -420,7 +420,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           coords: new LatLng(40.71969913667436, -73.84973904802793),
           category: 'Attraction',
           info: new InfoWindow({
-            content: `<article><header>Forest Hills Stadium</header>Event based<br /><br /><p>"Strictly live music hub; many in important names in th emusic industry have performed here "</p></article>`,
+            content: `<article><header>Forest Hills Stadium</header>Event based<br /><br /><p>Strictly live music hub; many in important names in th emusic industry have performed here </p></article>`,
           }),
         },
       ],
@@ -433,7 +433,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           coords: new LatLng(40.689193529437425, -73.97674583155452),
           category: 'School',
           info: new InfoWindow({
-            content: `<article><header>Brooklyn Tech</header><br /><br /><p>"A high school in New York City that specializes in science, technology, engineering, and mathematics."</p></article>`,
+            content: `<article><header>Brooklyn Tech</header><br /><br /><p>A high school in New York City that specializes in science, technology, engineering, and mathematics.</p></article>`,
           }),
         },
       ],
@@ -446,7 +446,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           coords: new LatLng(40.70843409354584, -74.05476234875039),
           category: 'Museum',
           info: new InfoWindow({
-            content: `<article><header>Liberty Science Center</header><br /><br /><p>"An interactive science museum and learning center"</p></article>`,
+            content: `<article><header>Liberty Science Center</header><br /><br /><p>An interactive science museum and learning center</p></article>`,
           }),
         },
       ],
@@ -459,7 +459,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           coords: new LatLng(40.832141202222054, -73.87756396513957),
           category: 'School',
           info: new InfoWindow({
-            content: `<article><header>Comp Sci High</header><br /><br /><p>"Comp Sci High, located in the Bronx, New York, is an educational institution dedicated to empowering students with essential academic and technological skills."</p></article>`,
+            content: `<article><header>Comp Sci High</header><br /><br /><p>Comp Sci High, located in the Bronx, New York, is an educational institution dedicated to empowering students with essential academic and technological skills.</p></article>`,
           }),
         },
       ],
@@ -472,7 +472,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           coords: new LatLng(40.58446202358707, -73.82450997930518),
           category: 'School',
           info: new InfoWindow({
-            content: `<article><header>Scholars Academy</header><br /><br /><p>""</p></article>`,
+            content: `<article><header>Scholars Academy</header><br /><br /><p>Known for its resilient and hardworking students called Seawolves, boasts a 100% graduation rate and ranks as the 17th highest rated school in New York City. With a strong emphasis on academic excellence, students strive to maintain high GPA and attendance rates. The academy provides individual devices, fosters a supportive community, and offers a challenging curriculum that allows scholars to earn college credits through Advanced Placement exams and a partnership with St. Francis College.</p></article>`,
           }),
         },
       ],
@@ -485,7 +485,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           coords: new LatLng(40.83403808168061, -73.90474719201421),
           category: 'School',
           info: new InfoWindow({
-            content: `<article><header>Bronx Center for Science & Mathematics</header><br /><br /><p>"The Bronx Center for Science & Mathematics is committed to providing a superior educational experience to public school children. BCSM’s academic success is built on a foundation of core virtues which prepare our students for global citizenship and guide our school’s culture:\n\n- Respect\n- Integrity\n- Honor\n- Excellence\n- Commitment\n- Perseverance\n- Service"</p></article>`,
+            content: `<article><header>Bronx Center for Science & Mathematics</header><br /><br /><p>The Bronx Center for Science & Mathematics is committed to providing a superior educational experience to public school children. BCSM’s academic success is built on a foundation of core virtues which prepare our students for global citizenship and guide our school’s culture:<br /><br />- Respect<br />- Integrity<br />- Honor<br />- Excellence<br />- Commitment<br />- Perseverance<br />- Service</p></article>`,
           }),
         },
       ],
@@ -497,9 +497,6 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           lng: -74.05192579212854,
           coords: new LatLng(40.701961508157225, -74.05192579212854),
           category: 'Attraction',
-          info: new InfoWindow({
-            content: `<article><header>Liberty State Park</header><br /><br /><p>"Scholars’ Academy, known for its resilient and hardworking students called Seawolves, boasts a 100% graduation rate and ranks as the 17th highest rated school in New York City. With a strong emphasis on academic excellence, students strive to maintain high GPA and attendance rates. The academy provides individual devices, fosters a supportive community, and offers a challenging curriculum that allows scholars to earn college credits through Advanced Placement exams and a partnership with St. Francis College."</p></article>`,
-          }),
         },
       ],
       [
@@ -511,7 +508,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           coords: new LatLng(40.74369067146295, -73.98708962652007),
           category: 'Museum',
           info: new InfoWindow({
-            content: `<article><header>Museum of Mathematics</header><br /><br /><p>"Math museum emphasizing interactive exhibits on patterns & structures aimed at all ages."</p></article>`,
+            content: `<article><header>Museum of Mathematics</header><br /><br /><p>Math museum emphasizing interactive exhibits on patterns & structures aimed at all ages.</p></article>`,
           }),
         },
       ],
@@ -525,7 +522,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           category: 'Event',
           info: new InfoWindow({
             content: `<article><header>Dance Africa Bazaar BAM</header>Thu, Dec 14 at 1pm
-<br /><br /><p>"An annual event held in New York City at the Brooklyn Academy of Music (BAM). It's part of the larger DanceAfrica festival, which celebrates African and diaspora dance, music, and culture.\r\n\r\nThe bazaar is a vibrant marketplace where attendees can explore and purchase a wide range of African and African-inspired goods, including clothing, jewelry, art, crafts, and more. It's not just a shopping experience; it's also a cultural exchange where visitors can immerse themselves in the diverse traditions and artistic expressions of Africa and its diaspora."</p></article>`,
+<br /><br /><p>An annual event held in New York City at the Brooklyn Academy of Music (BAM). It's part of the larger DanceAfrica festival, which celebrates African and diaspora dance, music, and culture.<br /><br />The bazaar is a vibrant marketplace where attendees can explore and purchase a wide range of African and African-inspired goods, including clothing, jewelry, art, crafts, and more. It's not just a shopping experience; it's also a cultural exchange where visitors can immerse themselves in the diverse traditions and artistic expressions of Africa and its diaspora.</p></article>`,
           }),
         },
       ],
@@ -538,7 +535,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           coords: new LatLng(40.6867048228863, -73.9775903971614),
           category: 'School',
           info: new InfoWindow({
-            content: `<article><header>Brooklyn Academy of Music</header><br /><br /><p>"The Brooklyn Academy of Music (BAM) is a renowned cultural institution located in Brooklyn, New York City. Founded in 1861, BAM has evolved into a dynamic center for the performing arts, presenting a diverse array of theater, dance, music, opera, and film from around the world."</p></article>`,
+            content: `<article><header>Brooklyn Academy of Music</header><br /><br /><p>The Brooklyn Academy of Music (BAM) is a renowned cultural institution located in Brooklyn, New York City. Founded in 1861, BAM has evolved into a dynamic center for the performing arts, presenting a diverse array of theater, dance, music, opera, and film from around the world.</p></article>`,
           }),
         },
       ],
@@ -551,7 +548,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           coords: new LatLng(40.67262499298462, -73.96797469716198),
           category: 'Attraction',
           info: new InfoWindow({
-            content: `<article><header>Brooklyn Public Library Central</header><br /><br /><p>"The main branch of the Brooklyn Public Library in Brooklyn, New York City. Located on Grand Army Plaza, at the corner of Flatbush Avenue and Eastern Parkway, it contains over 1.7 million materials in its collection and has a million annual visitors."</p></article>`,
+            content: `<article><header>Brooklyn Public Library Central</header><br /><br /><p>The main branch of the Brooklyn Public Library in Brooklyn, New York City. Located on Grand Army Plaza, at the corner of Flatbush Avenue and Eastern Parkway, it contains over 1.7 million materials in its collection and has a million annual visitors.</p></article>`,
           }),
         },
       ],
@@ -564,7 +561,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           coords: new LatLng(40.778796377133105, -73.92207185263992),
           category: 'Attraction',
           info: new InfoWindow({
-            content: `<article><header>Astoria Park</header><br /><br /><p>"Astoria Park is a beloved waterfront park located in the Astoria neighborhood of Queens, New York City. It offers stunning views of the East River and the Manhattan skyline, along with recreational amenities such as jogging paths, sports fields, playgrounds, and a public pool."</p></article>`,
+            content: `<article><header>Astoria Park</header><br /><br /><p>Astoria Park is a beloved waterfront park located in the Astoria neighborhood of Queens, New York City. It offers stunning views of the East River and the Manhattan skyline, along with recreational amenities such as jogging paths, sports fields, playgrounds, and a public pool.</p></article>`,
           }),
         },
       ],
@@ -577,7 +574,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           coords: new LatLng(40.662243564570396, -73.93380449470402),
           category: 'Attraction',
           info: new InfoWindow({
-            content: `<article><header>Parade Grounds Soccer Field</header><br /><br /><p>"The Parade Grounds Soccer Field is a popular sports facility located in Brooklyn, New York City. It provides playing fields for soccer enthusiasts of all ages and skill levels, offering a space for recreational matches, leagues, and community events."</p></article>`,
+            content: `<article><header>Parade Grounds Soccer Field</header><br /><br /><p>The Parade Grounds Soccer Field is a popular sports facility located in Brooklyn, New York City. It provides playing fields for soccer enthusiasts of all ages and skill levels, offering a space for recreational matches, leagues, and community events.</p></article>`,
           }),
         },
       ],
@@ -590,7 +587,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
           coords: new LatLng(40.572548230022264, -73.98356779160885),
           category: 'Attraction',
           info: new InfoWindow({
-            content: `<article><header>Coney Island</header><br /><br /><p>"Coney Island is an iconic seaside destination in Brooklyn, New York City, known for its lively boardwalk, amusement parks, and sandy beaches. It's a hub of entertainment, featuring attractions like Luna Park, the Cyclone roller coaster, and the annual Mermaid Parade."</p></article>`,
+            content: `<article><header>Coney Island</header><br /><br /><p>Coney Island is an iconic seaside destination in Brooklyn, New York City, known for its lively boardwalk, amusement parks, and sandy beaches. It's a hub of entertainment, featuring attractions like Luna Park, the Cyclone roller coaster, and the annual Mermaid Parade.</p></article>`,
           }),
         },
       ],
