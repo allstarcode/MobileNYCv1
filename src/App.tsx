@@ -232,7 +232,7 @@ function App() {
           coords: new LatLng(40.705624935951505, -74.00168571806202),
           category: 'Attraction',
           info: new InfoWindow({
-            content: `<article><header>The Rooftop at Pier 17</header><br /><br /><p>Sunset views with outdoor concert experience</p></article>`,
+            content: `<article><header>The Rooftop at Pier 17</header><br /><p>Sunset views with outdoor concert experience</p></article>`,
           }),
         },
       ],
@@ -245,7 +245,7 @@ function App() {
           coords: new LatLng(40.75760735955322, -74.00225452599453),
           category: 'Event',
           info: new InfoWindow({
-            content: `<article><header>Javits Center New York International Auto Show</header><br /><br /><p>Car culture<br />Tech in automotive world<br />Tech advancements <br />Tech variations from across the world</p></article>`,
+            content: `<article><header>Javits Center New York International Auto Show</header><br /><p>Car culture<br />Tech in automotive world<br />Tech advancements <br />Tech variations from across the world</p></article>`,
           }),
         },
       ],
@@ -433,7 +433,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>The conference is an excellen
           coords: new LatLng(40.689193529437425, -73.97674583155452),
           category: 'School',
           info: new InfoWindow({
-            content: `<article><header>Brooklyn Tech</header><br /><br /><p>A high school in New York City that specializes in science, technology, engineering, and mathematics.</p></article>`,
+            content: `<article><header>Brooklyn Tech</header><br /><p>A high school in New York City that specializes in science, technology, engineering, and mathematics.</p></article>`,
           }),
         },
       ],
@@ -446,7 +446,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>The conference is an excellen
           coords: new LatLng(40.70843409354584, -74.05476234875039),
           category: 'Museum',
           info: new InfoWindow({
-            content: `<article><header>Liberty Science Center</header><br /><br /><p>An interactive science museum and learning center</p></article>`,
+            content: `<article><header>Liberty Science Center</header><br /><p>An interactive science museum and learning center</p></article>`,
           }),
         },
       ],
@@ -459,7 +459,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>The conference is an excellen
           coords: new LatLng(40.832141202222054, -73.87756396513957),
           category: 'School',
           info: new InfoWindow({
-            content: `<article><header>Comp Sci High</header><br /><br /><p>Comp Sci High, located in the Bronx, New York, is an educational institution dedicated to empowering students with essential academic and technological skills.</p></article>`,
+            content: `<article><header>Comp Sci High</header><br /><p>Comp Sci High, located in the Bronx, New York, is an educational institution dedicated to empowering students with essential academic and technological skills.</p></article>`,
           }),
         },
       ],
@@ -472,7 +472,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>The conference is an excellen
           coords: new LatLng(40.58446202358707, -73.82450997930518),
           category: 'School',
           info: new InfoWindow({
-            content: `<article><header>Scholars Academy</header><br /><br /><p>Known for its resilient and hardworking students called Seawolves, boasts a 100% graduation rate and ranks as the 17th highest rated school in New York City. With a strong emphasis on academic excellence, students strive to maintain high GPA and attendance rates. The academy provides individual devices, fosters a supportive community, and offers a challenging curriculum that allows scholars to earn college credits through Advanced Placement exams and a partnership with St. Francis College.</p></article>`,
+            content: `<article><header>Scholars Academy</header><br /><p>Known for its resilient and hardworking students called Seawolves, boasts a 100% graduation rate and ranks as the 17th highest rated school in New York City. With a strong emphasis on academic excellence, students strive to maintain high GPA and attendance rates. The academy provides individual devices, fosters a supportive community, and offers a challenging curriculum that allows scholars to earn college credits through Advanced Placement exams and a partnership with St. Francis College.</p></article>`,
           }),
         },
       ],
@@ -485,7 +485,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>The conference is an excellen
           coords: new LatLng(40.83403808168061, -73.90474719201421),
           category: 'School',
           info: new InfoWindow({
-            content: `<article><header>Bronx Center for Science & Mathematics</header><br /><br /><p>The Bronx Center for Science & Mathematics is committed to providing a superior educational experience to public school children. BCSM’s academic success is built on a foundation of core virtues which prepare our students for global citizenship and guide our school’s culture:<br /><br />- Respect<br />- Integrity<br />- Honor<br />- Excellence<br />- Commitment<br />- Perseverance<br />- Service</p></article>`,
+            content: `<article><header>Bronx Center for Science & Mathematics</header><br /><p>The Bronx Center for Science & Mathematics is committed to providing a superior educational experience to public school children. BCSM’s academic success is built on a foundation of core virtues which prepare our students for global citizenship and guide our school’s culture:<br /><br />- Respect<br />- Integrity<br />- Honor<br />- Excellence<br />- Commitment<br />- Perseverance<br />- Service</p></article>`,
           }),
         },
       ],
@@ -508,7 +508,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>The conference is an excellen
           coords: new LatLng(40.74369067146295, -73.98708962652007),
           category: 'Museum',
           info: new InfoWindow({
-            content: `<article><header>Museum of Mathematics</header><br /><br /><p>Math museum emphasizing interactive exhibits on patterns & structures aimed at all ages.</p></article>`,
+            content: `<article><header>Museum of Mathematics</header><br /><p>Math museum emphasizing interactive exhibits on patterns & structures aimed at all ages.</p></article>`,
           }),
         },
       ],
@@ -535,7 +535,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>The conference is an excellen
           coords: new LatLng(40.6867048228863, -73.9775903971614),
           category: 'School',
           info: new InfoWindow({
-            content: `<article><header>Brooklyn Academy of Music</header><br /><br /><p>The Brooklyn Academy of Music (BAM) is a renowned cultural institution located in Brooklyn, New York City. Founded in 1861, BAM has evolved into a dynamic center for the performing arts, presenting a diverse array of theater, dance, music, opera, and film from around the world.</p></article>`,
+            content: `<article><header>Brooklyn Academy of Music</header><br /><p>The Brooklyn Academy of Music (BAM) is a renowned cultural institution located in Brooklyn, New York City. Founded in 1861, BAM has evolved into a dynamic center for the performing arts, presenting a diverse array of theater, dance, music, opera, and film from around the world.</p></article>`,
           }),
         },
       ],
@@ -548,7 +548,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>The conference is an excellen
           coords: new LatLng(40.67262499298462, -73.96797469716198),
           category: 'Attraction',
           info: new InfoWindow({
-            content: `<article><header>Brooklyn Public Library Central</header><br /><br /><p>The main branch of the Brooklyn Public Library in Brooklyn, New York City. Located on Grand Army Plaza, at the corner of Flatbush Avenue and Eastern Parkway, it contains over 1.7 million materials in its collection and has a million annual visitors.</p></article>`,
+            content: `<article><header>Brooklyn Public Library Central</header><br /><p>The main branch of the Brooklyn Public Library in Brooklyn, New York City. Located on Grand Army Plaza, at the corner of Flatbush Avenue and Eastern Parkway, it contains over 1.7 million materials in its collection and has a million annual visitors.</p></article>`,
           }),
         },
       ],
@@ -561,7 +561,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>The conference is an excellen
           coords: new LatLng(40.778796377133105, -73.92207185263992),
           category: 'Attraction',
           info: new InfoWindow({
-            content: `<article><header>Astoria Park</header><br /><br /><p>Astoria Park is a beloved waterfront park located in the Astoria neighborhood of Queens, New York City. It offers stunning views of the East River and the Manhattan skyline, along with recreational amenities such as jogging paths, sports fields, playgrounds, and a public pool.</p></article>`,
+            content: `<article><header>Astoria Park</header><br /><p>Astoria Park is a beloved waterfront park located in the Astoria neighborhood of Queens, New York City. It offers stunning views of the East River and the Manhattan skyline, along with recreational amenities such as jogging paths, sports fields, playgrounds, and a public pool.</p></article>`,
           }),
         },
       ],
@@ -574,7 +574,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>The conference is an excellen
           coords: new LatLng(40.662243564570396, -73.93380449470402),
           category: 'Attraction',
           info: new InfoWindow({
-            content: `<article><header>Parade Grounds Soccer Field</header><br /><br /><p>The Parade Grounds Soccer Field is a popular sports facility located in Brooklyn, New York City. It provides playing fields for soccer enthusiasts of all ages and skill levels, offering a space for recreational matches, leagues, and community events.</p></article>`,
+            content: `<article><header>Parade Grounds Soccer Field</header><br /><p>The Parade Grounds Soccer Field is a popular sports facility located in Brooklyn, New York City. It provides playing fields for soccer enthusiasts of all ages and skill levels, offering a space for recreational matches, leagues, and community events.</p></article>`,
           }),
         },
       ],
@@ -587,7 +587,7 @@ https://www.cb14youthconference.nyc/<br /><br /><p>The conference is an excellen
           coords: new LatLng(40.572548230022264, -73.98356779160885),
           category: 'Attraction',
           info: new InfoWindow({
-            content: `<article><header>Coney Island</header><br /><br /><p>Coney Island is an iconic seaside destination in Brooklyn, New York City, known for its lively boardwalk, amusement parks, and sandy beaches. It's a hub of entertainment, featuring attractions like Luna Park, the Cyclone roller coaster, and the annual Mermaid Parade.</p></article>`,
+            content: `<article><header>Coney Island</header><br /><p>Coney Island is an iconic seaside destination in Brooklyn, New York City, known for its lively boardwalk, amusement parks, and sandy beaches. It's a hub of entertainment, featuring attractions like Luna Park, the Cyclone roller coaster, and the annual Mermaid Parade.</p></article>`,
           }),
         },
       ],
