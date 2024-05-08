@@ -656,17 +656,10 @@ https://www.cb14youthconference.nyc/<br /><br /><p>"The conference is an excelle
             console.error(`Could not get location ${lID}`);
             return;
           }
-          // addMarker(map, loc.lat, loc.lng, loc.name);
 
-          // const pinSVG = parser.parseFromString(pinSVGStr, 'image/svg+xml').documentElement;
-          // const pin = new PinElement({
-          //   glyph: `Marker ${i+1}`
-          // })
           const markerPayload = {
             map,
             position: { lat: loc.lat, lng: loc.lng },
-            // content: pin.element,
-            // content: redSVG.cloneNode(),
             content: makeSVG(getColor(loc.category)),
             // title: loc.name,
           };
